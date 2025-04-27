@@ -1,0 +1,41 @@
+# ========== Unity текстовые ассеты ==========
+
+*.meta text
+*.unity text
+*.prefab text
+*.mat text
+*.anim text
+*.controller text
+*.overrideController text
+*.physicsMaterial2D text
+*.physicsMaterial text
+*.shader text
+*.cginc text
+*.compute text
+*.json text
+*.xml text
+*.txt text
+*.asmdef text
+*.asset text
+*.mask text
+*.renderTexture text
+*.lighting text
+
+# ========== Бинарные ассеты ==========
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.tga binary
+*.psd binary
+*.fbx binary
+*.obj binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.mp4 binary
+*.mov binary
+
+# ========== Стандарт авто-обработки переносов строк ==========
+
+* text=auto eol=lf

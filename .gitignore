@@ -1,0 +1,70 @@
+# ========== Unity игнорирование ==========
+
+# Временные и генерируемые файлы
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+MemoryCaptures/
+UserSettings/
+
+# Кеш XR и плагинов
+XR/
+
+# Автоматически генерируемые файлы IDE
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+# Rider IDE
+.idea/
+*.sln.iml
+
+# VSCode
+.vscode/
+
+# Билды
+*.exe
+*.apk
+*.aab
+*.zip
+*.appx
+
+# Логи
+*.log
+
+# Windows системные файлы
+Thumbs.db
+Desktop.ini
+
+# ========== Оставляем для проекта ==========
+
+!Assets/
+!ProjectSettings/
+!Packages/
+!*.asmdef
+!*.shader
+!*.cginc
+!*.compute
+!*.prefab
+!*.unity
+!*.mat
+!*.anim
+!*.controller
+!*.renderTexture
+!*.asset
+
+# Адресуемые ассеты (если будут)
+[Aa]ssets/**/StreamingAssets/aa.meta
+[Aa]ssets/**/StreamingAssets/aa/**
