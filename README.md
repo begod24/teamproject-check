@@ -1,6 +1,5 @@
 # 🎮 ArmataVR — VR Cannon Shooter Game
 
-![ArmataVR Banner](https://raw.githubusercontent.com/begod24/teamproject/main/Banner.jpg)
 
 A 3D VR shooter game designed for **Meta Quest 2**, developed using **Unity (XR)** with integrated backend services for user authentication and scoreboards.
 
