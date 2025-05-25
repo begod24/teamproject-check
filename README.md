@@ -35,8 +35,3 @@ A 3D VR shooter game designed for **Meta Quest 2**, developed using **Unity (XR)
 - 💻 C# for gameplay and backend integration
 
 ---
-
-## 📜 License
-
-This project is licensed under the **GPL-3.0 License**.  
-See the `LICENSE` file for more information.
