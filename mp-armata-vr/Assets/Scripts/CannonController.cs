@@ -2,6 +2,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
+using System.Collections;
 
 public class CannonController : MonoBehaviour
 {
@@ -23,6 +24,17 @@ public class CannonController : MonoBehaviour
   public float turnSpeed = 30f;
   public float turnRotationMin = -30f;
   public float turnRotationMax = 30f;
+
+  [SerializeField] public int maxAmmo = 1;
+  [SerializeField] private int currentAmmo;
+  [SerializeField ]public float reloadTime = 10f;
+  public bool reloading = false;
+
+  void Start()
+  {
+    currentAmmo = maxAmmo;
+  }
+  
   
   private SimpleControls _simpleControls;
   private Vector2 _aimRotation = Vector2.zero;
@@ -54,11 +66,27 @@ public class CannonController : MonoBehaviour
 
   private void Update()
   {
+    if(reloading)
+      return;
+    if (currentAmmo <= 0)
+    {
+      StartCoroutine(Reload());
+      return;
+    }
     Vector2 move = _simpleControls.gameplay.move.ReadValue<Vector2>();
     Aim(move.y);
     Turn(move.x);
 
     _timeSinceLastShot += Time.deltaTime;
+  }
+
+  IEnumerator Reload()
+  {
+    reloading = true;
+    Debug.Log("Reloading...");
+    yield return new WaitForSeconds(reloadTime);
+    currentAmmo = maxAmmo; 
+    reloading = false;
   }
 
   private void ToggleMenu()
@@ -95,6 +123,7 @@ public class CannonController : MonoBehaviour
 
   private void Fire()
   {
+    currentAmmo--;
     if (_timeSinceLastShot >= shotDelay)
     {
       _timeSinceLastShot = 0f;

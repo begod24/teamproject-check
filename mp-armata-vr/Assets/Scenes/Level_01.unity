@@ -25071,6 +25071,10 @@ MonoBehaviour:
   turnSpeed: 30
   turnRotationMin: -60
   turnRotationMax: 60
+  maxAmmo: 1
+  currentAmmo: 0
+  reloadTime: 3
+  reloading: 0
   shotDelay: 1
 --- !u!4 &1656139344 stripped
 Transform:
