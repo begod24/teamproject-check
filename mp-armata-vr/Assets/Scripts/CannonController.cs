@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 using System.Collections;
+using TMPro;
 
 public class CannonController : MonoBehaviour
 {
@@ -25,11 +26,15 @@ public class CannonController : MonoBehaviour
   public float turnRotationMin = -30f;
   public float turnRotationMax = 30f;
 
-  [SerializeField] public int maxAmmo = 1;
+  [SerializeField] public int maxAmmo = 10;
   [SerializeField] private int currentAmmo;
   [SerializeField ]public float reloadTime = 10f;
+  
   public bool reloading = false;
+  public bool noammo = false;
 
+  public TMP_Text ammoText;
+  
   void Start()
   {
     currentAmmo = maxAmmo;
@@ -50,6 +55,7 @@ public class CannonController : MonoBehaviour
     _turnRotation = transform.localEulerAngles;
     turnRotationMin += _turnRotation.y;
     turnRotationMax += _turnRotation.y;
+    
   }
 
   private void OnEnable()
@@ -66,27 +72,51 @@ public class CannonController : MonoBehaviour
 
   private void Update()
   {
+    
     if(reloading)
       return;
-    if (currentAmmo <= 0)
-    {
-      StartCoroutine(Reload());
-      return;
-    }
+    
+      if (currentAmmo <= 0)
+      {
+        StartCoroutine(Reload());
+        return;
+      }
+       
+    
+    
+
     Vector2 move = _simpleControls.gameplay.move.ReadValue<Vector2>();
     Aim(move.y);
     Turn(move.x);
 
     _timeSinceLastShot += Time.deltaTime;
+    
   }
 
   IEnumerator Reload()
   {
-    reloading = true;
-    Debug.Log("Reloading...");
-    yield return new WaitForSeconds(reloadTime);
-    currentAmmo = maxAmmo; 
-    reloading = false;
+    {
+      reloading = true;
+      Debug.Log("Reloading...");
+      yield return new WaitForSeconds(reloadTime);
+      if (maxAmmo > 0)
+      {
+        currentAmmo = 1;
+        maxAmmo--;
+        noammo = false; 
+      }
+      else
+      {
+        currentAmmo = 0;
+        if (!noammo)
+        {
+          Debug.Log("No ammo left");
+          noammo = true; 
+        }
+      }
+
+      reloading = false;
+    }
   }
 
   private void ToggleMenu()
@@ -132,4 +162,8 @@ public class CannonController : MonoBehaviour
       rigidBody.AddForce(cannonBall.transform.forward * projectileForce, ForceMode.Impulse);
     }
   }
+
+  
+
+  
 }

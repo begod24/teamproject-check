@@ -6,8 +6,9 @@ using UnityEngine;
 
 namespace Complete
 {
-    public class ScoreZone : MonoBehaviour
+    public class ScoreZone : MonoBehaviour 
     {
+        
         public TMP_Text scoreRemaining;
         private int remainingItems = 0;
 
@@ -15,6 +16,7 @@ namespace Complete
         {
             remainingItems = GameObject.FindGameObjectsWithTag("Target").Length;
             UpdateText();
+            
         }
 
         private void UpdateText()
