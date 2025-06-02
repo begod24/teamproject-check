@@ -67,6 +67,17 @@
                 },
                 {
                     "name": "",
+                    "id": "bc0a07ea-4434-4849-9cb3-e3cfab3fa9e3",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e1b8c4dd-7b3a-4db6-a93a-0889b59b1afc",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
