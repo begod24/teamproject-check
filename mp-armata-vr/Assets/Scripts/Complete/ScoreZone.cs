@@ -10,18 +10,22 @@ namespace Complete
     {
         
         public TMP_Text scoreRemaining;
-        private int remainingItems = 0;
+        public int remainingItems = 0;
+        
+        
 
-        private void Awake()
+        public void Awake()
         {
+            
             remainingItems = GameObject.FindGameObjectsWithTag("Target").Length;
+            
             UpdateText();
             
         }
 
-        private void UpdateText()
+        public void UpdateText()
         {
             scoreRemaining.text = remainingItems.ToString();
         }
     }
-}
+}   

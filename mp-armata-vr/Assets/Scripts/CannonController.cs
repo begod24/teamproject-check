@@ -97,7 +97,6 @@ public class CannonController : MonoBehaviour
   {
     {
       reloading = true;
-      Debug.Log("Reloading...");
       yield return new WaitForSeconds(reloadTime);
       if (maxAmmo > 0)
       {
