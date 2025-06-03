@@ -34,10 +34,12 @@ public class CannonController : MonoBehaviour
   public bool noammo = false;
 
   public TMP_Text ammoText;
+  public GameOverScreen gameOverScreen;
   
   void Start()
   {
-    currentAmmo = maxAmmo;
+    currentAmmo = 1;
+    
   }
   
   
@@ -108,12 +110,13 @@ public class CannonController : MonoBehaviour
       {
         currentAmmo = 0;
         if (!noammo)
-        {
-          Debug.Log("No ammo left");
+        { 
           noammo = true; 
+          if(gameOverScreen != null)
+            gameOverScreen.Setup();
         }
       }
-
+      UpdateText();
       reloading = false;
     }
   }
@@ -162,7 +165,10 @@ public class CannonController : MonoBehaviour
     }
   }
 
-  
+  public void UpdateText()
+  {
+    ammoText.text = (maxAmmo+currentAmmo).ToString ();
+  }
 
-  
+ 
 }
