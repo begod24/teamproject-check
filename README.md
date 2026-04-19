@@ -1,11 +1,11 @@
-# 🎮 ArmataVR — VR Cannon Shooter Game
+# ArmataVR — VR Cannon Shooter Game - Still in progress
 
 
 A 3D VR shooter game designed for **Meta Quest 2**, developed using **Unity (XR)** with integrated backend services for user authentication and scoreboards.
 
 ---
 
-## 👥 Team Members
+## Team Members
 
 - **Rustem Andassov** – Backend / DevOps Lead
 - **Bekbolat Aldiyarov** – VR Visuals & Lead Designer
@@ -14,7 +14,7 @@ A 3D VR shooter game designed for **Meta Quest 2**, developed using **Unity (XR)
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
 - **Platform:** Meta Quest 2 (VR)
 - **Engine:** Unity (XR Toolkit)
@@ -27,10 +27,10 @@ A 3D VR shooter game designed for **Meta Quest 2**, developed using **Unity (XR)
   
 ---
 
-## 📦 Technologies Used
+##  Technologies Used
 
-- 🎮 Unity 6(XR Management, OpenXR)
-- 🛠 Git + Git LFS (for large asset management)
-- 💻 C# for gameplay and backend integration
+-  Unity 6(XR Management, OpenXR)
+-  Git + Git LFS (for large asset management)
+-  C# for gameplay and backend integration
 
 ---
