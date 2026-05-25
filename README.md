@@ -10,8 +10,6 @@ A 3D VR shooter game designed for **Meta Quest 2**, developed using **Unity (XR)
 - **Rustem Andassov** – Backend / DevOps Lead
 - **Bekbolat Aldiyarov** – VR Visuals & Lead Designer
 - **Amir Smagul** – Game Logic & Integration Lead
-- **Nuraiym Sagynalieva** – Project Manager, UI/UX Designer
-
 ---
 
 ## Project Overview
@@ -25,12 +23,4 @@ A 3D VR shooter game designed for **Meta Quest 2**, developed using **Unity (XR)
     - **User authentication**
     - **Scoreboard management**
   
----
-
-##  Technologies Used
-
--  Unity 6(XR Management, OpenXR)
--  Git + Git LFS (for large asset management)
--  C# for gameplay and backend integration
-
 ---
